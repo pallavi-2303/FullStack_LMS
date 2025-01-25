@@ -80,7 +80,7 @@ const Profile = () => {
             <h1 className="font-semibold text-gray-900 dark:grey-100 ">
               Name:
               <span className="font-normal text-gray-700 dark:text-gray-300 ml-1">
-                {user.name}
+                {user?.name}
               </span>
             </h1>
           </div>
@@ -96,7 +96,7 @@ const Profile = () => {
             <h1 className="font-semibold text-gray-900 dark:grey-100 ">
               Role:
               <span className="font-normal text-gray-700 dark:text-gray-300 ml-1">
-                {user.role.toUpperCase()}
+                {user?.role.toUpperCase()}
               </span>
             </h1>
           </div>
@@ -162,10 +162,10 @@ const Profile = () => {
       <div>
         <h1 className="font-bold text-2xl ml-2">Courses you're Enrolled in</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-5">
-          {user.enrolledCourses.length === 0 ? (
+          {user?.enrolledCourses.length === 0 ? (
             <h1>You havent enrolled yet.</h1>
           ) : (
-            user.enrolledCourses.map((course, index) => <Course key={index} />)
+            user?.enrolledCourses.map((course, index) => <Course key={index} />)
           )}
         </div>
       </div>

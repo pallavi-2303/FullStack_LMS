@@ -52,14 +52,14 @@ export const login = async (req, res) => {
         message: "Incorrect email or password.",
       });
     }
-    const isPasswordMatch = await bcrypt.compare(password, user.password);
+    const isPasswordMatch = await bcrypt.compare(password, user?.password);
     if (!isPasswordMatch) {
       return res.status(400).json({
         success: false,
         message: "Incorrect password.",
       });
     }
-    generateToken(res, user, `Welcome back ${user.name}`);
+    generateToken(res, user, `Welcome back ${user?.name}`);
   } catch (error) {
     console.log(error);
     return res.status(400).json({
