@@ -21,7 +21,7 @@ import { useParams } from "react-router-dom";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
 
-const MEDIA_API = "http://localhost:8080/api/v1/media";
+const MEDIA_API = "https://fullstack-lms2.onrender.com/api/v1/media";
 const LectureTab = () => {
   const [lectureTitle, setLectureTitle] = useState();
   const [uploadVideoInfo, setUploadVideoInfo] = useState(null);

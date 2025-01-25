@@ -16,7 +16,7 @@ const app=express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin:"http://localhost:5175",
+    origin:"https://fullstack-lms2.onrender.com",
     credentials:true
 }))
 app.use("/api/v1/media",mediaRoute);
